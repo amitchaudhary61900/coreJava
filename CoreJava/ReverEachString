@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Input: ");
+        String input = scanner.nextLine();
+        
+    }
+    public static String reverEachString(String str){
+        if(str == null || str.isEmpty()){
+            return str;
+        }
+        
+        String [] words = str.split(" ");
+        StringBuilder result= new StringBuilder();
+        
+        for(int i=0; i< words.length; i++){
+            result.append(reverse(words[i]));
+            if(i<words.length-1){
+                result.append(" ");
+            }
+            
+        }
+        
+        public static String reverse(String str){
+            StringBuilder rev= new StringBuilder();
+            
+            for(int i = str.lenght()-1; i>=0;i--){
+                rev.append(str.charAt(i));
+            }
+            return rev.toString();
+        }
+    }
+}
